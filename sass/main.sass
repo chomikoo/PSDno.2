@@ -1,0 +1,324 @@
+$white: #ffffff
+$black: #000000
+$font-grey: #9D9D9D
+$header-grey: #737374
+$light-red:  #FF8C98
+$violet: #635C7E
+$pink: #C781BF
+$green: #68D19D
+$light-green: #82ca9c
+$footer: #182432
+$footer-grey: #B4B4B4
+$background: #F6F7FA
+
+
+=border-radius($radius)
+    -webkit-border-radius: $radius
+    -moz-border-radius:    $radius
+    -ms-border-radius:     $radius
+    border-radius:         $radius
+
+    
+* 
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+body
+    font-family: 'Open sans', sans-serif
+    background-color: $background
+
+.container 
+    max-width: 1000px
+    margin: 0 auto
+   
+    
+header
+    background-image: url("../img/jumbotron.jpg")
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    color: $white
+    height: 80vh
+    min-height: 400px
+    padding-top: 40vh
+    letter-spacing: 1px
+    margin-bottom: 45px
+    h1
+        font-size: 3.5rem
+        font-weight: 300
+        margin-bottom: 35px
+        
+    p
+        font-size: 0.8rem
+        line-height: 1.8
+
+    
+.about 
+    margin-bottom: 50px
+    h2
+        font-weight: 300
+        margin-bottom: 20px
+    p
+        color: $font-grey
+        font-size: 0.8rem
+        line-height: 1.8
+        margin-bottom: 15px
+        z-index: 30
+    img
+        position: absolute
+        bottom: 10px
+        width: 30%
+        height: auto
+        
+.gallery
+    margin-bottom: 50px
+    .row
+        max-width: 1100px
+        float: right
+        div
+            color: $white
+            min-height: 242px
+            padding: 35px 10px 35px 25px
+            h2  
+                font-size: 1.5rem
+                font-weight: 300
+                margin-bottom: 10px
+            p
+                font-size: 0.8rem
+                margin-bottom: 30px
+            a
+                color: $white
+                font-size: 0.7rem
+                font-weight: 700
+                text-decoration: none  
+                &:hover
+                    text-decoration: underline
+            &:nth-child(1)
+                background-color: $light-red
+            &:nth-child(2)
+                background-color: $violet
+            &:nth-child(3)
+                background-image: url('../img/g1.jpg') 
+                background-size: cover
+            &:nth-child(4)
+                background-color: $pink
+            &:nth-child(5)
+                background-image: url('../img/g2.jpg')
+                background-size: cover
+            &:nth-child(6)
+                background-color: $green
+            &:nth-child(7)
+                background-image: url('../img/g3.jpg')
+                background-size: cover
+            
+.detalis
+    margin: 50px 0
+    h2 
+        font-size: 2rem
+        font-weight: 300 
+        padding: 25px
+    div
+        h3
+            font-size: 0.8rem
+            font-weight: 700
+            margin-bottom: 20px
+            color: $header-grey
+        p
+            line-height: 1.5
+            color: $footer-grey
+            font-size: 0.8rem
+            
+        
+.more-power
+    background-image: url('../img/car.jpg')
+    background-size: cover
+    color: $white
+    height: 75vh
+    min-height: 400px
+    padding: 25px 0
+    h1
+        font-size: 3.5rem
+        font-weight: 300
+        margin-bottom: 20px
+    p
+        font-size: 0.8rem
+        line-height: 2
+        letter-spacing: 1.5px
+        margin-bottom: 20px
+    a
+        color: $white
+        font-size: 0.8rem
+        font-weight: 700
+        text-decoration: none
+        margin-bottom: 20px
+        
+.reasons
+    background-color: $green
+    color: $white
+    padding: 50px 0 80px 0
+    h2
+        font-size: 2rem
+        font-weight: 300 
+        padding: 25px
+    div    
+        h3
+            font-size: 0.8rem
+            font-weight: 700
+            margin-bottom: 20px
+        p
+            line-height: 1.75
+            letter-spacing: 1.25
+            font-size: 0.8rem
+            
+.purchase
+    color: $font-grey
+    padding: 40px 0
+    .row
+        [class*="col-"]
+            padding: 25px 
+            &:hover
+                box-shadow: 5px 5px 50px 8px rgba(210,210,212,1)
+                .label
+                    background-color: $pink
+            .label
+                +border-radius(5px)
+                background-color: $font-grey
+                color: $white
+                padding: 4px 10px
+            h2 
+                font-size: 2rem
+                font-weight: 300 
+                padding: 25px 0
+            p
+                line-height: 1.75
+                letter-spacing: 1.25
+                font-size: 0.8rem
+                margin-bottom: 20px
+            button
+                text-transform: uppercase
+                border: none
+                background-color: $green
+                +border-radius(5px)
+                color: $white
+                padding: 20px
+                &:hover
+                    background-color: $pink
+            .icons
+                margin-top: 20px
+                color: $font-grey
+                .fa
+                    font-size: 2em
+                    padding: 0
+                    margin-right: 10px
+                    
+footer
+    color: $footer-grey
+    background-color: $footer
+    padding: 100px 0
+    .row
+        h5
+            font-size: 0.9rem
+            font-weight: 700
+            margin-bottom: 10px;
+        p
+            font-size: 0.75rem
+            line-height: 1.5
+            margin-bottom: 25px
+        .row
+            [class*="col-"]
+                padding: 0
+                margin: 0
+                h6
+                    font-size: 0.7
+                    font-weight: 700
+                    margin-bottom: 15px
+                ul
+                    list-style-type: none
+                    a
+                        color: $footer-grey
+                        font-size: 0.7rem
+                        line-height: 1.5
+                        text-decoration: none
+        form
+            [type="email"]
+                +border-radius(5px 0 0 5px) 
+                height: 50px
+                width: calc(100% - 50px)
+                font-size: 1rem
+                float: left
+            [type="submit"]
+                background-color: $green
+                +border-radius(0 5px 5px 0)
+                border: none
+                color: $white
+                height: 50px
+                width: 50px
+                font-size: 1rem
+                cursor: pointer
+                
+        
+        
+        
+        
+        /* CLEARFIX */
+.row:before,
+.row:after 
+    content: ""
+    display: table
+    clear: both
+
+    
+    
+
+[class*="col-"] 
+    float: left
+    min-height: 1px
+    padding: 0 25px
+
+
+    
+/* Loop 1-st */
+@for $i from 1 through 12 
+    .col-lg-#{$i} 
+        width: 100% / 12 * $i
+
+/*Loop 2-d */
+
+@media (max-width: 768px) 
+    @for $i from 1 through 12 
+        .col-m-#{$i} 
+            width: 100% / 12 * $i
+
+/*Loop 3th */
+
+@media (max-width: 480px)
+    @for $i from 1 through 12 
+        .col-s-#{$i}
+            width: 100% /12 * $i   
+
+    
+@media (max-width: 768px)
+    header
+        padding-top: 15vh
+    .about
+        img
+            display: none
+    .detalis
+        [class*="col-"]
+            margin-top: 20px
+    
+    .reasons
+        [class*="col-"]
+            margin-top: 20px
+    footer 
+        [class*="col-"]
+            margin-top: 20px
+            
+            
+@media (max-width: 450px)
+    .more-power
+        h1
+            font-size: 8vw
+            p
+                font-size: 4vw
